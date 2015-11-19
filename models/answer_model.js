@@ -4,10 +4,10 @@ function Answer(args) {
   if (typeof this.args === "string")
   {
     // return function(x) { return x === "'"+this.args+"'"; };
-    return function(x) { return x === this.args; };
+    return function(x) { return x === args; };
   } else if(typeof this.args=== "number")
           {
-            return function(x) { return x === this.args; };
+            return function(x) { return x === args; };
           }else if (this.args instanceof RegExp)
                   {
                     // var t = /^foo(bar)?$/i;
@@ -15,22 +15,11 @@ function Answer(args) {
                     // es lo mismo esto
                     // var t = /^foo(bar)?$/i;
                     // alert(t.constructor == RegExp);//returns true
-                    return function(x) { return x.match(this.args); };
+                    return function(x) { return x.match(args); };
                     //Tratando de hacer duck-typing
                   }else if(this.args && this.args.constructor && this.args.call && this.args.apply)
                           {
-                            return function(x)
-                                              {
-                                                try {
-                                                  eval(x); /* DANGER DANGER DANGER */
-                                                  var z = Math.floor(Math.random()*100);
-                                                  return (square(z) == z*z);
-                                                }
-                                                catch(e) {
-                                                  return false;
-                                                }
-                                                return false;
-                                              };
+                            return args;
 
                           }else
                               {
