@@ -1,20 +1,24 @@
 " use strict";
 
-function Question(argument) {
+function Question(frage) {
   // body...
-  this.argument=argument;
+  this.frage=frage;
 }
 
-function ShortQuestion(argument) {
+function ShortQuestion(frage) {
   // body...
-  Question.call(this.argument);
+  Question.call(this,frage);
+  //input
+  this.vista="<input type='text' name='respuesta' placeholder='Ponga la respuesta' autofocus=''>";
 }
 
-function LongQuestion(argument) {
+function LongQuestion(frage) {
   // body...
-  Question.call(this.argument);
+  Question.call(this,frage);
+  //textarea
+  this.vista="";
 }
 
 module.exports = Question;
-module.exports = Question;
-module.exports = Question;
+module.exports = ShortQuestion;
+module.exports = LongQuestion;

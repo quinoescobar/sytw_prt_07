@@ -35,10 +35,6 @@ function Answer(args) {
                               {
                                 return typeof this.args != 'undefined';
                               }
-
-
-
-
   // body...
   // this.funci = funci;
   // this.cadena = cadena;
