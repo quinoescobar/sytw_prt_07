@@ -5,37 +5,12 @@ var LongQ = require('../models/question_model');
 function Quiz() {
   AbstractQuiz.call(this);
   this.q.push(
-    { pregunta: '¿Capital de Italia?',
-      respuesta: function(x) {
-        return (/^\s*roma\s*$/i).exec(x);
-      }
+    { pregunta: new ShortQ('¿Capital de Italia?'),
+      respuesta: new Answer(/^\s*roma\s*$/i)
     },
     {
-      pregunta: '¿Quien reinaba en España cuando se descubrió América?',
-      respuesta: function(x) {
-        if ((/\b(Isabel\s+y?\s*Fernando)|(Fernando\s+[ey]?\s*Isabel)\b/i).exec(x)) {
-          return true;
-        }
-        if ((/\breyes\s+cat[oó]licos\b/i).exec(x)) { return true; }
-        return false;
-      },
-    },
-    { /* Código inseguro. ¡No ejecute esta pregunta salvo en un
-         entorno en el que el código del "alumno" sea fiable!
-       */
-      pregunta: 'Escriba una función JavaScript de nombre <tt>square</tt> '+
-      'que recibe un número y devuelve el cuadrado',
-      respuesta: function(x) {
-        try {
-          eval(x); /* DANGER DANGER DANGER */
-          var z = Math.floor(Math.random()*100);
-          return (square(z) == z*z);
-        }
-        catch(e) {
-          return false;
-        }
-        return false;
-      }
+      pregunta: new LongQ('Cada país me distingue,porque yo lo represento,suelo estar en las alturas cara al sol y cara al viento.¿Soy una....?'),
+      respuesta: new Answer(/^\s*bandera\s*$/i),
     }
   );
   // insertar unas cuantas preguntas sobre
@@ -48,12 +23,12 @@ function Quiz() {
       var n2 = Math.randomInt(9)+1;
       //debug("n2 = "+n2);
       self.q.push(
-        { pregunta: '¿ '+n1+'x'+n2+"= ?",
-          respuesta: function(x) {
+        { pregunta: new ShortQ('¿ '+n1+'*'+n2+"= ?"),
+          respuesta:new Answer( function(x) {
             // debug("n1 = "+n1);
             // debug("n2 = "+n2);
             return (x == n1*n2);
-        }
+        })
       });
     })();
   }

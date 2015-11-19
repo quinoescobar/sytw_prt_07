@@ -16,7 +16,7 @@ function LongQuestion(frage) {
   // body...
   Question.call(this,frage);
   //textarea
-  this.vista="";
+  this.vista="<textarea rows='4' cols='50'>";
 }
 
 module.exports = Question;
