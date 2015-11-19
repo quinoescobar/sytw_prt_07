@@ -3,7 +3,8 @@ function Answer(args) {
   this.args=args;
   if (typeof this.args === "string")
   {
-    return function(x) { return x === "'"+this.args+"'"; };
+    // return function(x) { return x === "'"+this.args+"'"; };
+    return function(x) { return x === this.args; };
   } else if(typeof this.args=== "number")
           {
             return function(x) { return x === this.args; };
