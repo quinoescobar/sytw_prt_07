@@ -52,3 +52,5 @@ function Answer(args) {
   //     //aqui codigo de clasificacion de que tipo de argumento se ingresó
 	//   };
 }
+
+module.exports = Answer;
