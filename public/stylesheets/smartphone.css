@@ -1,5 +1,5 @@
 #page-wrap::after{
-  content: "Layout ancho";
+  content: "Layout pequeño";
 }
 h2 span , section h3{
   display: none;

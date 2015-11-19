@@ -3,7 +3,15 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+input{
+  text-align: center;
+  padding: 5px  5px;
+  font-size:xx-large;
+  margin-left: 8%;
+  width: 40%;
+  opacity: 100;
 
+}
 
 th{
   font-family: Arial;
@@ -55,7 +63,7 @@ section > div {
 
 header, nav, section, footer {
   background: #eee;
-  opacity: 0.6;
+  opacity: 0.7;
   text-align: center;
 }
 
