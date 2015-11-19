@@ -11,6 +11,18 @@ function Quiz() {
     {
       pregunta: new LongQ('Cada país me distingue,porque yo lo represento,suelo estar en las alturas cara al sol y cara al viento.¿Soy una....?'),
       respuesta: new Answer(/^\s*bandera\s*$/i),
+    },
+    {
+      pregunta: new ShortQ('¿Cuál es la salida de typeof null?'),
+      respuesta: new Answer("object")
+    },
+    {
+      pregunta: new ShortQ('Si hago kuak,nado,vuela,tiene plumas,¿ soy un ...?'),
+      respuesta: new Answer(/^\s*pato\s*$/i)
+    },
+    {
+      pregunta: new ShortQ('When I see a bird that walks like a duck and swims like a duck and quacks like a duck, ¿May i say it is a duck?(true or false)'),
+      respuesta: new Answer("true")
     }
   );
   // insertar unas cuantas preguntas sobre
