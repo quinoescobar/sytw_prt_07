@@ -13,7 +13,7 @@ function Quiz() {
       respuesta: new Answer(/^\s*bandera\s*$/i),
     },
     {
-      pregunta: new ShortQ('¿Cuál es la salida de typeof null?'),
+      pregunta: new ShortQ('¿Cuál es la salida de typeof null?(in lower case, testing strin input)'),
       respuesta: new Answer("object")
     },
     {
@@ -21,7 +21,7 @@ function Quiz() {
       respuesta: new Answer(/^\s*pato\s*$/i)
     },
     {
-      pregunta: new ShortQ('When I see a bird that walks like a duck and swims like a duck and quacks like a duck, ¿May i say it is a duck?(true or false)'),
+      pregunta: new ShortQ('When I see a bird that walks like a duck and swims like a duck and quacks like a duck, ¿May i say it is a duck?(true or false, in lower case, testing strin input)'),
       respuesta: new Answer("true")
     }
   );
