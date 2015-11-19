@@ -1,5 +1,7 @@
 var AbstractQuiz = require('../models/abstract_quiz_model');
-
+var Answer = require('../models/answer_models');
+var ShortQ = require('../models/question_model');
+var LongQ = require('../models/question_model');
 function Quiz() {
   AbstractQuiz.call(this);
   this.q.push(
