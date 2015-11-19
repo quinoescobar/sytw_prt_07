@@ -7,6 +7,6 @@ Despliegue en HEROKU y diseño adaptativo.
 
 Enlace página práctica [Quiz](https://quinoescobar.github.io/sytw_prt_07)
 
-Enlace página Desplegada, PONER HEROKU [Quiz](http://10.6.128.92:8080/)
+Enlace página Desplegada en HEROKU [Quiz](frozen-wildwood-4097.herokuapp.com)
 
 Enlace página author [Quinoescobar](https://quinoescobar.github.io)

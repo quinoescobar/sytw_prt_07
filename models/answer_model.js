@@ -1,4 +1,4 @@
-
+" use strict";
 function Answer(args) {
   // body...
   // this.funci = funci;
