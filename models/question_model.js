@@ -1,25 +1,27 @@
 " use strict";
 
-function Question(frage) {
+var Question =function Question(frage) {
   // body...
   this.frage=frage;
-}
+};
 
-function ShortQuestion(frage) {
+var ShortQuestion=function ShortQuestion(frage) {
   // body...
   Question.call(this,frage);
   //input
+  console.log("ShortQuestion"+ frage);
     this.vista="<input type='text' name='respuesta' placeholder='Ponga la respuesta' autofocus=''>";
-}
+};
 
-function LongQuestion(frage) {
+var LongQuestion=function LongQuestion(frage) {
   // body...
   Question.call(this,frage);
   //textarea
+  console.log("LongQuestion"+ frage);
   this.vista="<textarea name='respuesta' rows='4' cols='50' placeholder='Ponga la respuesta' autofocus=''></textarea>";
 
 
-}
+};
 
 
 Question.prototype.inputArea = function ()
@@ -38,6 +40,7 @@ Question.prototype.inputArea = function ()
 // module.exports = Question;
 // module.exports = ShortQuestion;
 // module.exports = LongQuestion;
+
 exports.Question = Question;
 exports.ShortQuestion = ShortQuestion;
 exports.LongQuestion = LongQuestion;
