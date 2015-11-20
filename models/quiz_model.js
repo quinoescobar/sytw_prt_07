@@ -5,23 +5,23 @@ var L = require('../models/question_model');
 function Quiz() {
   AbstractQuiz.call(this);
   this.q.push(
-    { pregunta:  S.ShortQuestion('¿Capital de Italia?'),
+    { pregunta:  new S.ShortQuestion('¿Capital de Italia?'),
       respuesta: new Answer(/^\s*roma\s*$/i)
     },
     {
-      pregunta:  L.LongQuestion('Cada país me distingue,porque yo lo represento,suelo estar en las alturas cara al sol y cara al viento.¿Soy una....?'),
+      pregunta:  new L.LongQuestion('Cada país me distingue,porque yo lo represento,suelo estar en las alturas cara al sol y cara al viento.¿Soy una....?'),
       respuesta: new Answer(/^\s*bandera\s*$/i),
     },
     {
-      pregunta:  S.ShortQuestion('¿Cuál es la salida de typeof null?(in lower case, testing strin input)'),
+      pregunta: new  S.ShortQuestion('¿Cuál es la salida de typeof null?(in lower case, testing strin input)'),
       respuesta: new Answer("object")
     },
     {
-      pregunta:  S.ShortQuestion('Si hago kuak,nado,vuela,tiene plumas,¿ soy un ...?'),
+      pregunta: new S.ShortQuestion('Si hago kuak,nado,vuela,tiene plumas,¿ soy un ...?'),
       respuesta: new Answer(/^\s*pato\s*$/i)
     },
     {
-      pregunta:  S.ShortQuestion('When I see a bird that walks like a duck and swims like a duck and quacks like a duck, ¿May i say it is a duck?(true or false, in lower case, testing strin input)'),
+      pregunta:  new S.ShortQuestion('When I see a bird that walks like a duck and swims like a duck and quacks like a duck, ¿May i say it is a duck?(true or false, in lower case, testing strin input)'),
       respuesta: new Answer("true")
     }
   );
@@ -35,7 +35,7 @@ function Quiz() {
       var n2 = Math.randomInt(9)+1;
       //debug("n2 = "+n2);
       self.q.push(
-        { pregunta:  S.ShortQuestion('¿ '+n1+'*'+n2+"= ?"),
+        { pregunta:  new S.ShortQuestion('¿ '+n1+'*'+n2+"= ?"),
           respuesta:new Answer( function(x) {
             // debug("n1 = "+n1);
             // debug("n2 = "+n2);

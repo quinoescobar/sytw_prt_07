@@ -9,17 +9,18 @@ var ShortQuestion=function ShortQuestion(frage) {
   // body...
   Question.call(this,frage);
   //input
-  console.log("ShortQuestion"+ frage);
+  console.log("ShortQuestion"+ this.frage);
     this.vista="<input type='text' name='respuesta' placeholder='Ponga la respuesta' autofocus=''>";
+  console.log("ShortQuestion"+ this.vista);
 };
 
 var LongQuestion=function LongQuestion(frage) {
   // body...
   Question.call(this,frage);
   //textarea
-  console.log("LongQuestion"+ frage);
+  console.log("LongQuestion"+ this.frage);
   this.vista="<textarea name='respuesta' rows='4' cols='50' placeholder='Ponga la respuesta' autofocus=''></textarea>";
-
+  console.log("LongQuestion"+ this.vista);
 
 };
 
