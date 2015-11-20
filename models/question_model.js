@@ -9,14 +9,14 @@ function ShortQuestion(frage) {
   // body...
   Question.call(this,frage);
   //input
-  this.vista="<input type='text' name='ShortQ'>"+ this.frage+"</input>";
+  this.vista="<input type='text' name='respuesta' placeholder='Ponga la respuesta' autofocus=''>";
 }
 
 function LongQuestion(frage) {
   // body...
   Question.call(this,frage);
   //textarea
-  this.vista="<textarea name='LongQ' rows='4' cols='50'>"+ this.frage +"</textarea>";
+  this.vista="<textarea name='respuesta' rows='4' cols='50' placeholder='Ponga la respuesta' autofocus=''></textarea>";
 
 }
 module.exports = Question;

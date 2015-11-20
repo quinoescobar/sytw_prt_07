@@ -3,7 +3,6 @@ function Answer(args) {
   this.args=args;
   if (typeof this.args === "string")
   {
-    // return function(x) { return x === "'"+this.args+"'"; };
     return function(x) { return x === args; };
   } else if(typeof this.args=== "number")
           {
@@ -25,18 +24,7 @@ function Answer(args) {
                               {
                                 return typeof this.args != 'undefined';
                               }
-  // body...
-  // this.funci = funci;
-  // this.cadena = cadena;
-  // this.exreg = exreg;
-  // this.args = args;
-  // this.tipo = args.tipo;
-  //
-  // this.evaluar = function() {
-	//     alert("evaluando "+this.args);
-  //
-  //     //aqui codigo de clasificacion de que tipo de argumento se ingresó
-	//   };
+
 }
 
 module.exports = Answer;
